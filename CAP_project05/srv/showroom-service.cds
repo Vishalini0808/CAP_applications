@@ -5,6 +5,7 @@ using { cuid} from '@sap/cds/common';
 service CarShowroomService  @odata.draft.enabled  @(requires: 'authenticated-user') {
 
     @requires : 'Admin'
+
     entity Manufacturers as projection on mcs.Manufacturer;
     entity CarModels as projection on mcs.CarModel;
     @cds.redirection.target

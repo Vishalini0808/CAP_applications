@@ -177,8 +177,6 @@ module.exports = cds.service.impl( async function () {
     this.on('READ', Showrooms, async (req) => {
     const data = await cds.run(req.query);
 
-    // console.log(data.map(c => c.city));
-
     const geoapi = await cds.connect.to('geo_url');
 
     for (let e of data) {

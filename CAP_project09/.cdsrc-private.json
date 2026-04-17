@@ -1,0 +1,34 @@
+{
+  "requires": {
+    "[hybrid]": {
+      "destinations": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "1e200a54trial",
+          "space": "dev",
+          "instance": "CAP_DESTINATION_SERVICE",
+          "key": "CAP_DESTINATION_SERVICE-key"
+        },
+        "kind": "destinations",
+        "vcap": {
+          "name": "destinations"
+        }
+      },
+      "CAP_PROJECT_09-key": {
+        "binding": {
+          "type": "cf",
+          "apiEndpoint": "https://api.cf.us10-001.hana.ondemand.com",
+          "org": "1e200a54trial",
+          "space": "dev",
+          "instance": "CAP_PROJECT_09-xsuaa",
+          "key": "CAP_PROJECT_09-xsuaa-key"
+        },
+        "kind": "xsuaa-auth",
+        "vcap": {
+          "name": "CAP_PROJECT_09-key"
+        }
+      }
+    }
+  }
+}

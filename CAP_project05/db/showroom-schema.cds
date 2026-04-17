@@ -4,7 +4,7 @@ namespace my.carshowroom;
 
 entity Manufacturer : cuid,managed {
 
-    name : String;
+    name : localized String;
     location : String;
     carModels : Association to many CarModel on carModels.manufacturer = $self;
 }
@@ -12,7 +12,7 @@ entity Manufacturer : cuid,managed {
 
 entity CarModel :cuid,managed {
 
-    name : String;
+    name : localized String;
     stock : Integer;
     baseprice : Decimal(15,2);
     oldprice : Decimal(15,2);
@@ -30,8 +30,8 @@ entity StateTax : managed{
 
 entity Showroom : cuid,managed {
 
-    name : String;
-    city : String;
+    name : localized String;
+    city : localized  String;
     state : Association to StateTax;
     manufacturer : Association to  Manufacturer;
     carModels : Association to many CarModelShowroom on carModels.showroom = $self;
